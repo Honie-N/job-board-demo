@@ -57,12 +57,52 @@
         }
         .profile {
             margin-bottom: 2rem;
+            text-align: center;
         }
-        img {
-            width: 200px;
-            height: 200px;
+        .profile img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
+            margin: 0.5rem;
+        }
+        .job-slideshow {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .job-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .profile-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .prev, .next {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        .split-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .split-container .container {
+            width: 48%;
+            margin-bottom: 2rem;
         }
         h3 {
             margin-top: 1rem;
@@ -89,53 +129,66 @@
     <span class="language-switcher">EN | DE</span>
 </nav>
 
-<section class="container" id="jobs">
-    <h2>Job Listings</h2>
-    <div class="job-listing">
-        <h3>Pflegefachfrau / Nursing Role - Germany</h3>
-        <p>Location: Germany</p>
-        <p>Language Requirements: German B2, English</p>
-        <p>Visa Sponsorship: Available</p>
-        <a href="#" class="apply-button">Apply Now</a>
-    </div>
-    <div class="job-listing">
-        <h3>FSJ - Volunteer Nursing Support - Germany</h3>
-        <p>Location: Germany</p>
-        <p>Language Requirements: German B2, English</p>
-        <p>Visa Sponsorship: Not available</p>
-        <a href="#" class="apply-button">Apply Now</a>
-    </div>
-    <div class="job-listing">
-        <h3>Ausbildung in Nursing - Germany</h3>
-        <p>Location: Germany</p>
-        <p>Language Requirements: German B2, English</p>
-        <p>Visa Sponsorship: Available</p>
-        <a href="#" class="apply-button">Apply Now</a>
-    </div>
-</section>
+<div class="split-container">
+    <section class="container" id="jobs">
+        <h2>Job Listings</h2>
+        <div class="job-listing">
+            <h3>Pflegefachfrau / Nursing Role - Germany</h3>
+            <p>Location: Germany</p>
+            <p>Language Requirements: German B2, English</p>
+            <p>Visa Sponsorship: Available</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+        <div class="job-listing">
+            <h3>FSJ - Volunteer Nursing Support - Germany</h3>
+            <p>Location: Germany</p>
+            <p>Language Requirements: German B2, English</p>
+            <p>Visa Sponsorship: Not available</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+        <div class="job-listing">
+            <h3>Ausbildung in Nursing - Germany</h3>
+            <p>Location: Germany</p>
+            <p>Language Requirements: German B2, English</p>
+            <p>Visa Sponsorship: Available</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+    </section>
 
-<div class="container">
-    <h1>Job Board - Profile Pictures</h1>
-
-    <div class="profile">
-        <img src="images/profile_picture_maria.png" alt="Profile picture of Maria L, Pflegefachfrau - Nursing Role">
-        <h3>Pflegefachfrau / Nursing Role - Maria L.</h3>
-        <p>Location: Philippines</p>
-        <p>A professional nurse in Germany, specializing in healthcare roles. Friendly and approachable.</p>
-    </div>
-
-    <div class="profile">
-        <img src="images/profile_picture_lar.png" alt="Profile picture of Lar S, FSJ Volunteer Nursing Support">
-        <h3>FSJ Volunteer Nursing Support - Lar S.</h3>
-        <p>Location: Philippines</p>
-        <p>Cheerful young adult, assisting in healthcare support as an FSJ volunteer in Germany.</p>
-    </div>
-
-    <div class="profile">
-        <img src="images/profile_picture_raul.png" alt="Profile picture of Raul Y, Ausbildung Nursing Trainee">
-        <h3>Ausbildung Nursing Trainee - Raul Y.</h3>
-        <p>Location: Philippines</p>
-        <p>Eager trainee working towards a career in nursing, currently training in Germany.</p>
+    <div class="container">
+        <h2>Job Board - Profile Pictures</h2>
+        <div class="job-slideshow">
+            <div class="job-slides">
+                <div class="profile-slide">
+                    <div class="profile">
+                        <img src="images/profile_picture_maria.png" alt="Profile picture of Maria L, Pflegefachfrau - Nursing Role">
+                        <h3>Pflegefachfrau / Nursing Role - Maria L.</h3>
+                        <p>Location: Philippines</p>
+                        <p>A professional nurse in Germany, specializing in healthcare roles. Friendly and approachable.</p>
+                    </div>
+                </div>
+                <div class="profile-slide">
+                    <div class="profile">
+                        <img src="images/profile_picture_lar.png" alt="Profile picture of Lar S, FSJ Volunteer Nursing Support">
+                        <h3>FSJ Volunteer Nursing Support - Lar S.</h3>
+                        <p>Location: Philippines</p>
+                        <p>Cheerful young adult, assisting in healthcare support as an FSJ volunteer in Germany.</p>
+                    </div>
+                </div>
+                <div class="profile-slide">
+                    <div class="profile">
+                        <img src="images/profile_picture_raul.png" alt="Profile picture of Raul Y, Ausbildung Nursing Trainee">
+                        <h3>Ausbildung Nursing Trainee - Raul Y.</h3>
+                        <p>Location: Philippines</p>
+                        <p>Eager trainee working towards a career in nursing, currently training in Germany.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-controls">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -154,6 +207,17 @@
 <footer class="footer">
     <p>&copy; 2024 GlobalCare Job Board</p>
 </footer>
+
+<script>
+    let currentSlide = 0;
+
+    function changeSlide(direction) {
+        const slides = document.querySelector('.job-slides');
+        const totalSlides = slides.children.length;
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+</script>
 
 </body>
 </html>
