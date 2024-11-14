@@ -104,6 +104,21 @@
             width: 48%;
             margin-bottom: 2rem;
         }
+        .how-benefits-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+        .how-benefits-container .container {
+            width: 48%;
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
         h3 {
             margin-top: 1rem;
         }
@@ -112,6 +127,15 @@
             padding: 1rem;
             background-color: #333;
             color: white;
+        }
+        .social-icons {
+            margin-top: 1rem;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            font-size: 1.5rem;
         }
     </style>
 </head>
@@ -166,7 +190,7 @@
                         <img src="images/profile_picture_maria.png" alt="Profile picture of Maria L, Pflegefachfrau - Nursing Role">
                         <h3>Pflegefachfrau / Nursing Role - Maria L.</h3>
                         <p>Location: Philippines</p>
-                        <p>A professional nurse, specializing in healthcare roles. Friendly and approachable.</p>
+                        <p>A professional nurse specializing in healthcare roles. Friendly and approachable.</p>
                     </div>
                 </div>
                 <div class="profile-slide">
@@ -182,7 +206,7 @@
                         <img src="images/profile_picture_raul.png" alt="Profile picture of Raul Y, Ausbildung Nursing Trainee">
                         <h3>Ausbildung Nursing Trainee - Raul Y.</h3>
                         <p>Location: Philippines</p>
-                        <p>Eager trainee working towards a career in nursing.</p>
+                        <p>Eager trainee working towards a career in nursing, currently training.</p>
                     </div>
                 </div>
             </div>
@@ -194,20 +218,31 @@
     </div>
 </div>
 
-<section class="container" id="how-it-works">
-    <h2>How It Works</h2>
-    <p>For Job Seekers: Browse listings, create a profile, and apply for positions that match your skills and qualifications.</p>
-    <p>For Employers: Post job listings, review candidates, and connect with skilled Filipino nurses for your healthcare needs.</p>
-</section>
-
-<section class="container" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@globalcarejobs.com</p>
-    <p>Phone: +49 123 456 789</p>
-</section>
+<div class="how-benefits-container">
+    <section class="container" id="how-it-works">
+        <h2>How It Works</h2>
+        <p>For Job Seekers: Browse listings, create a profile, and apply for positions that match your skills and qualifications.</p>
+        <p>For Employers: Post job listings, review candidates, and connect with skilled Filipino nurses for your healthcare needs.</p>
+    </section>
+    <section class="container" id="benefits">
+        <h2>Benefits for Job Seekers</h2>
+        <ul>
+            <li>Comprehensive visa sponsorship and relocation assistance.</li>
+            <li>Opportunities to bring your family along, including school enrollment for children and job support for spouses.</li>
+            <li>Access to language training programs, including AI tools to master the German language effectively.</li>
+            <li>Personalized support to help you transition smoothly into German healthcare roles.</li>
+        </ul>
+    </section>
+</div>
 
 <footer class="footer">
     <p>&copy; 2024 GlobalCare Job Board</p>
+    <div class="social-icons">
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">TikTok</a>
+        <a href="#" target="_blank">YouTube</a>
+        <a href="#" target="_blank">Facebook</a>
+    </div>
 </footer>
 
 <script>
